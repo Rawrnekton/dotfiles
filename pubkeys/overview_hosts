@@ -1,0 +1,17 @@
+anathema - phys, phone
+archon - vm, gitlab
+claw - phys, pi-hole (dns, dhcp)
+hound - phys, work laptop
+magnate - phys, home pc
+mammoth - vm (on vagabond), ispconfig-server [replacement for nestor]
+nestor - vm, webserver
+orca - phys, mediaserver
+panther - phys, vpn-home
+scimitar - phys, work pc (not currently in use)
+vagabond - phys, proxmox host
+
+
+
+alveran - phys, home pc [win]
+bart - phys, work pc
+vigor-mortis - tablet
