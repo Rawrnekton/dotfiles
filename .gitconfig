@@ -1,0 +1,14 @@
+[push]
+	default = simple
+[user]
+	name = Jonathan Gerdes
+	email = jona@cindergla.de
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
