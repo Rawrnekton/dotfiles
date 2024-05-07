@@ -11,8 +11,7 @@ eval "`dircolors`"
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
-
-alias tmux='tmux -2'
+alias la='ls -la'
 
 PROMPT_DIRTRIM=4
 PS1="\[\e[1;36m\]\u\[\e[38;5;202m\]@\h\[\e[1;36m\]:\w \[\e[0;36m\]\\$ \[\e[0;37m\]"
@@ -20,15 +19,13 @@ PS1="\[\e[1;36m\]\u\[\e[38;5;202m\]@\h\[\e[1;36m\]:\w \[\e[0;36m\]\\$ \[\e[0;37m
 export TERM=xterm
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export VISUAL=nvim
+export EDITOR=nvim
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export PATH=$PATH:/usr/games/
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
-# some non-significant binaries get installed here
-# namely cowsay, lolcat and fortune
-# /etc/profile explicitly excludes this for root
-PATH=$PATH:/usr/games/
+set -o vi
 
 # do ls -l after each cd command
 cd() { 
@@ -40,3 +37,19 @@ mkcdir() {
     mkdir -p -- "$1" && 
     cd -P -- "$1"; 
 }
+
+# aliassssses
+alias t='tmux -2'
+alias v='nvim'
+alias sv='sudoedit'
+alias ..="cd .."
+alias k='kubectl'
+#source <(kubectl completion bash)
+alias kgp='kubectl get pods'
+alias kgn='kubectl get nodes'
+
+# the rest is history
+export HISTFILE=~/.histfile
+export HISTSIZE=25000
+export SAVEHIST=25000
+export HISTCONTROL=ignorespace
