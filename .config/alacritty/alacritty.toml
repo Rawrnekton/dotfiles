@@ -1,0 +1,23 @@
+import = [
+    "~/.config/alacritty/themes/gruvbox_dark.toml"
+]
+
+[font]
+size = 12
+
+[font.normal]
+#family = "JetBrains Mono"
+family = "0xProto Nerd Font Mono"
+
+[window]
+decorations = "none"
+
+[window.padding]
+x = 7
+y = 5
+
+[keyboard]
+bindings = [
+  { key = "Back", mods = "Alt", chars = "\u0017"},
+  { key = "Back", mods = "Control", chars = "\u0017"},
+]
