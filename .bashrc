@@ -7,7 +7,7 @@
 
 # You may uncomment the following lines if you want `ls' to be colorized:
 export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
+eval "$(dircolors)"
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
@@ -28,14 +28,14 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 set -o vi
 
 # do ls -l after each cd command
-cd() { 
-    builtin cd "$@" && ls -l;
+cd() {
+	builtin cd "$@" && ls -l
 }
 
 # change into the created directory
-mkcdir() { 
-    mkdir -p -- "$1" && 
-    cd -P -- "$1"; 
+mkcdir() {
+	mkdir -p -- "$1" &&
+		cd -P -- "$1"
 }
 
 # aliassssses
