@@ -16,7 +16,8 @@ alias la='ls -la'
 PROMPT_DIRTRIM=4
 PS1="\[\e[1;36m\]\u\[\e[38;5;202m\]@\h\[\e[1;36m\]:\w \[\e[0;36m\]\\$ \[\e[0;37m\]"
 
-export TERM=xterm
+#export TERM=xterm
+export TERM=xterm-256color
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export VISUAL=nvim
@@ -40,6 +41,7 @@ mkcdir() {
 
 # aliassssses
 alias t='tmux -2'
+alias tmux='tmux -2'
 alias v='nvim'
 alias sv='sudoedit'
 alias ..="cd .."
