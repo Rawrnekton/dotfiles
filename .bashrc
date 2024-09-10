@@ -12,9 +12,10 @@ alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l'
 alias l='ls $LS_OPTIONS -lA'
 alias la='ls -la'
+alias lt='ls $LS_OPTIONS -lt'   # nach Änderungsdatum sortiert
+alias lS='ls $LS_OPTIONS -lS'   # nach Dateigröße sortiert
+alias lr='ls $LS_OPTIONS -lrt'  # neueste Dateien zuletzt
 
-PROMPT_DIRTRIM=4
-PS1="\[\e[1;36m\]\u\[\e[38;5;202m\]@\h\[\e[1;36m\]:\w \[\e[0;36m\]\\$ \[\e[0;37m\]"
 
 #export TERM=xterm
 export TERM=xterm-256color
@@ -26,7 +27,7 @@ export EDITOR=nvim
 #export PATH=$PATH:/usr/games/
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-set -o vi
+#set -o vi
 
 # do ls -l after each cd command
 cd() {
@@ -36,7 +37,7 @@ cd() {
 # change into the created directory
 mkcdir() {
 	mkdir -p -- "$1" &&
-		cd -P -- "$1"
+	cd -P -- "$1"
 }
 
 # aliassssses
@@ -45,6 +46,9 @@ alias tmux='tmux -2'
 alias v='nvim'
 alias sv='sudoedit'
 alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
 alias k='kubectl'
 #source <(kubectl completion bash)
 alias kgp='kubectl get pods'
@@ -54,4 +58,6 @@ alias kgn='kubectl get nodes'
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
-export HISTCONTROL=ignorespace
+export HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
