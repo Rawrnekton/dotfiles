@@ -31,7 +31,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # do ls -l after each cd command
 cd() {
-	builtin cd "$@" && ls -l
+  builtin cd "$@" && [ "$PS1" ] && pushd . > /dev/null && ll
 }
 
 # change into the created directory
