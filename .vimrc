@@ -9,3 +9,6 @@ set number
 set relativenumber
 
 set ls=2
+
+set clipboard=unnamedplus
+
