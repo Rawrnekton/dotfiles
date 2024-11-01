@@ -3,12 +3,14 @@
 [user]
 	name = Jonathan Gerdes
 	email = jona@cindergla.de
+[color]
+    status = always
 [color "diff"]
 	meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
