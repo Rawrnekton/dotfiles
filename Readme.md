@@ -2,7 +2,7 @@
 ## "Enable" dotfiles
 ```
 # out of the basedir of the repo
-stow ~/.
+stow .
 ```
 
 ## Terminal - Alacritty
