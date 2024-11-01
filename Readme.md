@@ -1,4 +1,10 @@
 # Setup
+## "Enable" dotfiles
+```
+# out of the basedir of the repo
+stow ~/.
+```
+
 ## Terminal - Alacritty
 ```
 sudo apt install alacritty
