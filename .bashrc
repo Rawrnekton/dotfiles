@@ -24,7 +24,8 @@ alias git-watch='watch -t --color git status --short --branch'
 parse_git_branch() {
   branch=$(git branch 2>/dev/null | grep '\*' | sed 's/* //')
   if [ -n "$branch" ]; then
-    echo "($branch)"
+    # this has an extra space, to not have double spaces when there is no git
+    echo "($branch) " 
   fi
 }
 
@@ -34,7 +35,7 @@ shorten_user() {
 }
 
 # PS1-Definition mit Git-Branch
-PS1="\[\e[1;36m\]$(shorten_user):\[\e[38;5;202m\]\w \[\e[1;33m\]\$(parse_git_branch) \[\e[0;36m\]\$\[\e[0m\] "
+PS1="\[\e[1;36m\]$(shorten_user):\[\e[38;5;202m\]\w \[\e[1;33m\]\$(parse_git_branch)\[\e[0;36m\]\$\[\e[0m\] "
 
 PROMPT_DIRTRIM=2
 
