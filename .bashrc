@@ -16,6 +16,10 @@ alias lt='ls $LS_OPTIONS -lt'   # nach Änderungsdatum sortiert
 alias lS='ls $LS_OPTIONS -lS'   # nach Dateigröße sortiert
 alias lr='ls $LS_OPTIONS -lrt'  # neueste Dateien zuletzt
 
+# alias for shorter copy to clipboard
+# requires
+# sudo apt install xclip
+alias copy='xclip -sel clip'
 
 # git status pretty
 alias git-watch='watch -t --color git status --short --branch'
