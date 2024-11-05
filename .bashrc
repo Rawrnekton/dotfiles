@@ -84,4 +84,4 @@ export HISTSIZE=25000
 export SAVEHIST=25000
 export HISTCONTROL=ignoredups:ignorespace
 #shopt -s histappend
-export PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
