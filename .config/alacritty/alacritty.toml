@@ -58,6 +58,8 @@ family = "0xProto Nerd Font Mono"
 [window]
 decorations = "none"
 dynamic_padding = true
+opacity = 0.9
+startup_mode = "Maximized"
 
 [keyboard]
 bindings = [
